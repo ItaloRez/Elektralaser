@@ -1,0 +1,166 @@
+.card{
+    
+    border-radius: 20px;
+    background: #fff;
+    position: relative;
+    margin: 20px;
+    user-select: none;
+
+   .image{
+       height: 140px;
+       width: 140px;
+       padding: 3px;
+       background: #BB9BB0;
+       box-sizing: border-box;
+       margin: 0;
+       border-radius: 50%;
+   }
+   
+   img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+   }
+
+   .cardContent{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       padding: 30px;
+       position: relative;
+       z-index: 100;
+   }
+
+   &::before{
+        content: "";
+        position: absolute;
+        height: 30%;
+        width: 100%;
+        background: #BB9BB0;
+        border-radius: 20px 20px 0 0;
+    }
+
+   .mediaIcons{
+       position: absolute;
+       top: 10px;
+       right: 20px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+
+   .nameProfession{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       margin-top: 10px;
+       color: #333;
+       cursor: pointer;
+
+       .name{
+           font-size:24px;
+           font-weight: 600;
+       }
+
+       .profession{
+           display: flex;
+           align-items: center;
+           gap: 8px;
+           margin-top: 14px;
+           font-size: 15px;
+           font-weight: 500;
+
+           &:hover{
+               color: #BB9BB0;
+           }
+           
+
+           svg{
+               color: green;
+           }
+       }
+   }
+
+   .rating{
+         display: flex;
+         align-items: center;
+         margin-top: 18px;
+         color: #333;
+
+         &[badge="0"]:after {
+            display: initial;
+        }
+    
+   }
+
+   .button{
+       width: 100%;
+       display: flex;
+       justify-content: space-around;
+       margin-top: 20px;
+       gap: 10px;
+
+       button{
+           background: #BB9BB0;
+           outline: none;
+           border: none;
+           color: #fff;
+           padding: 8px 22px;
+           flex: 1;
+           border-radius: 20px;
+           font-size: 14px;
+           cursor: pointer;
+           transition: all 0.3s ease;
+
+           &:hover{
+               background: rgb(91, 91, 255);
+               
+           }
+       }
+   }
+}
+
+.mediaIcons{
+    svg{
+        margin-top: 10px;
+        opacity: 0.6;
+        color: #fff;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover{
+            opacity: 1;
+        }
+
+        
+        
+    } 
+}
+
+
+
+
+
+[badge]:after {
+    background: red;
+    border-radius: 30px;
+    color: #fff;
+    content: attr(badge);
+    font-size: 11px;
+    margin-top: -10px;
+    min-width: 20px;
+    padding: 2px;
+    position: absolute;
+    text-align: center;
+}
+
+[badge^="-"]:after,
+[badge="0"]:after,
+[badge=""]:after {
+ display: none;
+}

@@ -1,0 +1,42 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.icon{
+    box-sizing: border-box;
+    font-size: 0.7em;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    flex: 1 1 80px;
+    align-items: center;
+    margin: 4px;
+
+}
+
+.selected{
+    color: #F1E3E4;
+    width: 100%;
+}
+
+.button{
+    display: flex;
+    height: 60px;
+    align-items: center;
+
+    &:hover{  
+        background: rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        color: #F1E3E4;
+    }
+}
+
+.selectedBox{
+    height: 90%;
+    margin-left: 2px;
+    width: 4px;
+    background: transparent;
+    border-radius: 2px;
+}

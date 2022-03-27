@@ -1,0 +1,38 @@
+.header{
+    background: #BB9BB0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: static;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+}
+
+.navigationMenu{
+    display: flex;
+    -webkit-app-region: no-drag;
+    li{
+        
+
+        a{
+            display: block;
+            padding: 20px 15px;
+            color: rgb(87, 86, 86);
+
+            &:hover{
+                color: black;
+                cursor: pointer;
+                background:rgba(255,255,255, 0.1)
+            }
+        }
+    }
+}
+
+#close{
+    &:hover{
+        color: red;
+        background: rgba(255, 0, 0, 0.1)
+    }
+}
+

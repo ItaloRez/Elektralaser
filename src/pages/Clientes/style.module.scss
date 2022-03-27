@@ -1,0 +1,43 @@
+.containerClientes{
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: auto;
+    padding: 10px 30px;
+}
+
+
+.title{
+    color: #1C1D21;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.header{
+    display: flex;
+    padding: 20px 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button{
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 8px;
+
+    &:hover{
+        transform: scale(1.1,1.1);
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .containerClientes{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
